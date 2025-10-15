@@ -13,7 +13,7 @@ This is a web-based AI object detection application that runs directly in your b
 ---
 
 ## 🖼️ Preview
-<a href="https://ibb.co/JCNgfJr"><img src="https://i.ibb.co/3LYhx1Z/fggggg.jpg" alt="preview-combined" width="100%"></a>
+<a href="https://ibb.co/JCNgfJr"><img src="https://i.ibb.co/3LYhx1Z/fggggg.jpg" alt="preview-combined" width="70%"></a>
 
 ---
 
