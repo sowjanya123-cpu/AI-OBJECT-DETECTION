@@ -5,7 +5,7 @@ This is a web-based AI object detection application that runs directly in your b
 
 ---
 
-## ⚙️ Features
+#⚙️ Features
 - ✅ Toggle switch to enable or disable AI detection  
 - ✅ Range slider to control frame rate  
 - ✅ Real-time object detection through your camera  
