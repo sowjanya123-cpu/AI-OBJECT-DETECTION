@@ -20,6 +20,7 @@ This is a web-based AI object detection application that runs directly in your b
 ## 💪 Try It
 Not convinced yet? Try it out yourself here:  
 👉 [Live Demo](https://sowjanya123-cpu.github.io/AI-OBJECT-DETECTION/)
+LIVE DEMO(http://127.0.0.1:5500/index.html)
 
 ---
 
