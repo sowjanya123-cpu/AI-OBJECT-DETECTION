@@ -1,19 +1,160 @@
 body {
-    text-align: center;
+ font-family:'Inter';
+  background: #deeef0;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
 }
 
-video {
-    width: 0px;
-    height: 0px;
+/* Navbar */
+nav {
+  background: #1ec031;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-table {
-    width: auto;
-    margin: auto;
+/* Centered Layout */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
 }
 
-tr,
-td {
-    border: 0px;
-    text-align: center;
+input[type=range] {
+  width: 140px;
+  accent-color: #4cc9ff;
+}
+
+input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+
+.main-container {
+  width: 100%;
+  max-width: 850px;
+}
+
+/* Video Section */
+.video-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000; /* black background for clean AI look */
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+video,
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Controls Panel */
+.controls-container {
+  margin-top: 25px;
+  border-radius: 16px;
+  padding: 25px 30px;
+  background: #a0b5cf;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls-container:hover {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+.control-label {
+  font-weight: 700;
+  color: #0d47a1;
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size:25px;
+}
+
+/* AI Toggle Switch */
+.switch label {
+  font-weight: 600;
+  font-size: 20px;
+  font-family:'Inter';
+  color:  #0d47a1;
+}
+
+.switch label input[type="checkbox"]:checked + .lever {
+  background-color: #42a5f5;
+}
+
+.switch label input[type="checkbox"]:checked + .lever::after {
+  background-color: #0d47a1;
+}
+
+/* FPS Slider */
+.range-field input[type="range"] {
+  margin-top: 8px;
+  accent-color: #0d47a1;
+}
+
+/* Status Bar */
+.status-bar {
+  margin-top: 18px;
+  background: #ffff;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-weight: 800;
+  font-size:20px;
+  color: #1565c0;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 18px 10px;
+  background: #e3f2fd;
+  color: #0d47a1;
+  text-align: center;
+  font-size: 20px;
+  font-family:'Inter';
+  font-weight: 500;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    margin-top: 25px;
+  }
+
+  .main-container {
+    max-width: 95%;
+  }
+
+  .controls-container {
+    padding: 20px;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+  }
 }

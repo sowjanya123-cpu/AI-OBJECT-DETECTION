@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Detection Panel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, #1e3c72, #0a1a2f);
+      font-family: "Poppins", sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .glass-wrapper {
+      width: 90%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 26px;
+      padding: 35px;
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 35px rgba(76,201,255,0.35);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 65px;
+      color: #4cc9ff;
+      text-shadow: 0 0 12px rgba(76,201,255,0.8);
+    }
+
+    .status {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 600;
+      color: #d6f1ff;
+    }
+
+    .video-box {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 0 35px rgba(56,189,255,0.45);
+      background: #000c18;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    video, canvas {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    .settings-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 30px;
+    }
+
+    input[type="checkbox"] {
+      width: 23px;
+      height: 23px;
+      transform: scale(1.5);
+      cursor: pointer;
+      accent-color: #4cc9ff;
+    }
+
+    label {
+      font-weight: 600;
+      color: #e3f6ff;
+    }
+
+    input[type=range] {
+      width: 140px;
+      accent-color: #4cc9ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="glass-wrapper">
+
+    <h1>AI Detection Panel</h1>
+
+    <div class="status" id="loadingText">Loading Model...</div>
+
+    <div class="video-box">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="c1"></canvas>
+    </div>
+
+    <div class="settings-box">
+      <div class="status" id="statusText">Waiting for Model...</div>
+
+      <div class="controls">
+        <label>
+          <input type="checkbox" id="ai"> Enable AI
+        </label>
+
+        <label>
+          FPS:
+          <input type="range" id="fps" min="5" max="60" value="30">
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var modelIsLoaded = false;
+
+    const objectDetector = ml5.objectDetector("cocossd", {}, () => {
+      document.getElementById("loadingText").innerText = "Model Loaded ✔";
+      document.getElementById("statusText").innerText = "Model Ready";
+      modelIsLoaded = true;
+    });
+  </script>
+
+  <script src="video.js"></script>
+
+</body>
+</html>
