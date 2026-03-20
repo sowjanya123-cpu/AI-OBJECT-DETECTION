@@ -42,6 +42,6 @@ The app works on most modern browsers. Below are the tested ones:
 
 ---
 
-## ✌️ Credits
+##  Credits
 - [Materialize](https://materializecss.com/) – for UI components  
 - [ml5.js](https://ml5js.org/) – for machine learning in the browser  
