@@ -1,4 +1,4 @@
-# 🤖 AI Object Detection
+#  AI Object Detection
 
 ##  About this Project
 This is a web-based AI object detection application that runs directly in your browser. It uses your device’s camera to detect objects in real time, making it easy and accessible without requiring any installation.
